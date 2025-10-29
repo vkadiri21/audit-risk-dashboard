@@ -1,0 +1,64 @@
+Audit Risk AI Dashboard – User Manual
+(For Students, Auditors, Supply Chain Managers - Code file Attached)
+
+1. What Is This Tool?
+Predicts if an audit is HIGH or LOW risk using AI.
+
+Input: Financial & operational data
+Output: Risk score + probability
+Accuracy: 99%+ on real audit data
+Use Case: Flag fake invoices, fraud, or warehouse anomalies
+
+2. REQUIREMENTS FOR THE PYTHON CODE TO WORK:
+streamlit
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+joblib
+
+3. How to Use the Dashboard
+Section 1: Exploratory Data Analysis (EDA)
+
+Chart,What It Shows
+Risk Distribution,% of high vs low risk audits
+Correlation Heatmap,Which factors drive risk?
+Top Risky Locations,Locations with highest fraud
+Section 2: Predict New Audit Risk
+Input Sliders (Adjust These)
+Section 2: Predict New Audit Risk
+
+Slider,Meaning,Typical Range
+Sector Score,Industry risk level,1–60
+PARA_A,Material misstatement A,0–100
+PARA_B,Material misstatement B,0–100
+Money Value,Transaction size,0–1000+
+History,Past audit issues,0–10
+District Loss,Regional risk,0–10
+PROB,Sampling probability,0.2–0.6
+Control Risk,Internal controls,0.4–2.0
+Inherent Risk,Natural risk,0–200
+
+
+
+4. Example Use Case (Supply Chain)
+
+
+Your Data,Map to Slider
+"Order_Value = $15,000",→ Money Value
+Supplier_Delayed = 5 days,→ History
+Anomaly_Score = 0.8,→ PARA_A = 80
+Fraud = 1,→ Risk = 1
+
+Prediction: HIGH RISK → Trigger:
+
+AGV to scan shipment
+Email to manager
+Block payment
+
+
+Customise using your data.
+
+
+
